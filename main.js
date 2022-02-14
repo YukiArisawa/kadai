@@ -29,13 +29,13 @@ function showContents(obj) {
 
     // 要素の中身
     anchor.href = content.owner.html_url;
-    icon.src = content.owner.avatar_url;  
-    icon.id = "icon"; 
+    icon.src = content.owner.avatar_url;
+    icon.id = "icon";
     figcaption_elm.textContent = content.name;
-    const image2 = new Image();
-    image2.src = "star.png";
-    image2.alt = "star";
-    image2.id = "star";
+    const star_img = new Image();
+    star_img.src = "star.png";
+    star_img.alt = "star";
+    star_img.id = "star";
     span_elm.textContent = content.stargazers_count;
 
     // HTMLの構成
@@ -43,7 +43,7 @@ function showContents(obj) {
     figure_elm.appendChild(icon);
     figure_elm.appendChild(figcaption_elm);
     figure_elm.appendChild(parameter);
-    parameter.appendChild(image2)
+    parameter.appendChild(star_img)
     parameter.appendChild(span_elm);
 
     main.appendChild(anchor);
